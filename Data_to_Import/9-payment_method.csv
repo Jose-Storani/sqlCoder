@@ -1,0 +1,11 @@
+id,name
+1,"Tarjeta de crédito"
+2,"Tarjeta de débito"
+3,PayPal
+4,"Transferencia bancaria"
+5,Efectivo
+6,Cheque
+7,"Apple Pay"
+8,"Google Pay"
+9,Bitcoin
+10,"Amazon Pay"

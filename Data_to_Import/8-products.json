@@ -1,0 +1,137 @@
+[
+  {
+      "code": "PRD001",
+      "brand": 1,
+      "name": "Café Arabica Premium",
+      "description": "Café de alta calidad con aroma y sabor excepcionales.",
+      "category": 3,
+      "stock": 100,
+      "created_by": 2
+  },
+  {
+      "code": "PRD002",
+      "brand": 2,
+      "name": "Croissant de Chocolate",
+      "description": "Delicioso croissant relleno de chocolate belga.",
+      "category": 6,
+      "stock": 50,
+      "created_by": 4
+  },
+  {
+      "code": "PRD003",
+      "brand": 3,
+      "name": "Té Verde Orgánico",
+      "description": "Té verde de cultivo orgánico con propiedades antioxidantes.",
+      "category": 5,
+      "stock": 75,
+      "created_by": 1
+  },
+  {
+      "code": "PRD004",
+      "brand": 1,
+      "name": "Muffin de Arándanos",
+      "description": "Muffin esponjoso con jugosos arándanos.",
+      "category": 6,
+      "stock": 40,
+      "created_by": 3
+  },
+  {
+      "code": "PRD005",
+      "brand": 2,
+      "name": "Café Latte",
+      "description": "Café suave con leche vaporizada y toque de espuma.",
+      "category": 1,
+      "stock": 90,
+      "created_by": 5
+  },
+  {
+      "code": "PRD006",
+      "brand": 3,
+      "name": "Baguette Tradicional",
+      "description": "Baguette crujiente de masa madre, perfecta para bocadillos.",
+      "category": 6,
+      "stock": 60,
+      "created_by": 2
+  },
+  {
+      "code": "PRD007",
+      "brand": 1,
+      "name": "Café Instantáneo",
+      "description": "Café en polvo soluble para preparar al instante.",
+      "category": 7,
+      "stock": 120,
+      "created_by": 1
+  },
+  {
+      "code": "PRD008",
+      "brand": 2,
+      "name": "Capsula compatible Nespresso",
+      "description": "Intenso café con toques de madera",
+      "category": 7,
+      "stock": 30,
+      "created_by": 4
+  },
+  {
+      "code": "PRD009",
+      "brand": 3,
+      "name": "Café Moka",
+      "description": "Café espresso con chocolate y leche vaporizada.",
+      "category": 1,
+      "stock": 80,
+      "created_by": 3
+  },
+  {
+      "code": "PRD010",
+      "brand": 1,
+      "name": "Galleta de Avena y Pasas",
+      "description": "Galleta saludable con avena y pasas.",
+      "category": 6,
+      "stock": 55,
+      "created_by": 5
+  },
+  {
+      "code": "PRD011",
+      "brand": 2,
+      "name": "Café Descafeinado",
+      "description": "Café sin cafeína pero con todo el sabor.",
+      "category": 1,
+      "stock": 70,
+      "created_by": 2
+  },
+  {
+      "code": "PRD012",
+      "brand": 3,
+      "name": "Azucar x 5kg",
+      "description": "Azucar en terrones y bastones individuales",
+      "category": 2,
+      "stock": 45,
+      "created_by": 1
+  },
+  {
+      "code": "PRD013",
+      "brand": 1,
+      "name": "Café Espresso",
+      "description": "Café espresso fuerte y aromático.",
+      "category": 1,
+      "stock": 110,
+      "created_by": 4
+  },
+  {
+      "code": "PRD014",
+      "brand": 2,
+      "name": "Te de Manzana",
+      "description": "Inti zen nos trae este nuevo blend digno de su degustación",
+      "category": 5,
+      "stock": 35,
+      "created_by": 3
+  },
+  {
+      "code": "PRD015",
+      "brand": 3,
+      "name": "Café Frappé",
+      "description": "Café helado con toque refrescante.",
+      "category": 1,
+      "stock": 65,
+      "created_by": 5
+  }
+]
