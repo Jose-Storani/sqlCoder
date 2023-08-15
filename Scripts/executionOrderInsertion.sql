@@ -21,3 +21,6 @@ select * from invoice;
 select * from invoice_products_detail;
 
 select * from products_stored;
+
+#luego de hacer todas las inserciones desde los archivos csv y json, es necesario commit para guardar los cambios en la BD
+COMMIT;
