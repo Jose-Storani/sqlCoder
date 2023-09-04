@@ -13,4 +13,38 @@ Posee distintas sucursales dentro de la ciudad de origen (Rosario - Santa fe).
 
 
 
+### Vistas
+#### Debts
+Muestra número de factura, id de cliente, monto y fecha de todas las facturas que tengan la condición inpaga.
+
+#### Last_year_invoices
+Muestra id del cliente, nombre,  número de factura, monto y fecha de aquellas facturas correspondientes únicamente al año corriente, ordenadas de manera ascendente.
+
+## Funciones
+### unpayed_invoice
+Recibe como parámetro un id de cliente. Devuelve el conteo de la cantidad de facturas impagas por dicho cliente.  
+Funciona dentro de la lógica de negocio para bloquear la venta a aquellos clientes donde la función devuelva un valor mayor a 10.
+
+## Stored Procedures
+### InsertProduct
+Recibe 7 parámetros de entrada con sus correspondientes tipados:
+
+- product_code VARCHAR(255)
+- brand_id TINYINT
+- product_name VARCHAR(60)
+- product_description TINYTEXT
+- category_id TINYINT
+- stock INT
+- created_by_employee_id INT
+
+Luego, inserta esos valores dentro de la tabla **Products**, completando así la creación de un nuevo producto.
+
+### UpdateProductStock
+Recibe dos parámetros de entrada
+
+- product_code VARCHAR(255)
+- new_stock_quantity INT
+
+Actualiza el stock de productos en la tabla **Products**.
+
 

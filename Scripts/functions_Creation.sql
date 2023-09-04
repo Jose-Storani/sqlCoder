@@ -1,10 +1,4 @@
 use billingsystem;
-select * from branch;
-select * from employee;
-select * from invoice;
-select * from invoice where YEAR(date) = 2022 and month(date)=10;
-
-
 
 DELIMITER $$
 CREATE FUNCTION unpayed_invoice(id INT) 

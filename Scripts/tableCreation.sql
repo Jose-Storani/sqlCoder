@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `billingSystem`.`Branch` (
   `name` VARCHAR(45) NOT NULL,
   `address` VARCHAR(255) NOT NULL,
   `employees_quantity` INT NULL,
-  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE,
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC),
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -41,9 +41,9 @@ CREATE TABLE IF NOT EXISTS `billingSystem`.`Employee` (
   `email` VARCHAR(255) NOT NULL,
   `user_type` ENUM("empleado", "administrador") NOT NULL DEFAULT 'empleado',
   `branch` INT NOT NULL,
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC),
   PRIMARY KEY (`id`),
-  INDEX `branch_idx` (`branch` ASC) VISIBLE,
+  INDEX `branch_idx` (`branch` ASC),
   CONSTRAINT `branch`
     FOREIGN KEY (`branch`)
     REFERENCES `billingSystem`.`Branch` (`id`)
@@ -88,13 +88,13 @@ CREATE TABLE IF NOT EXISTS `billingSystem`.`Client` (
   `dni` VARCHAR(15) NULL,
   `cuit` VARCHAR(20) NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
-  UNIQUE INDEX `phone_number_UNIQUE` (`phone_number` ASC) VISIBLE,
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
-  INDEX `fiscal_condition_idx` (`fiscal_condition` ASC) VISIBLE,
-  UNIQUE INDEX `dni_UNIQUE` (`dni` ASC) VISIBLE,
-  UNIQUE INDEX `cuit_UNIQUE` (`cuit` ASC) VISIBLE,
-  INDEX `location_idx` (`location` ASC) VISIBLE,
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC),
+  UNIQUE INDEX `phone_number_UNIQUE` (`phone_number` ASC),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC),
+  INDEX `fiscal_condition_idx` (`fiscal_condition` ASC),
+  UNIQUE INDEX `dni_UNIQUE` (`dni` ASC) ,
+  UNIQUE INDEX `cuit_UNIQUE` (`cuit` ASC),
+  INDEX `location_idx` (`location` ASC),
   CONSTRAINT `fiscal_condition`
     FOREIGN KEY (`fiscal_condition`)
     REFERENCES `billingSystem`.`Fiscal_Condition` (`code`)
@@ -141,10 +141,10 @@ CREATE TABLE IF NOT EXISTS `billingSystem`.`Products` (
   `stock` INT NOT NULL DEFAULT 0,
   `created_by` INT NOT NULL,
   PRIMARY KEY (`code`),
-  UNIQUE INDEX `code_UNIQUE` (`code` ASC) VISIBLE,
-  INDEX `brand_idx` (`brand` ASC) VISIBLE,
-  INDEX `category_idx` (`category` ASC) VISIBLE,
-  INDEX `created_by_idx` (`created_by` ASC) VISIBLE,
+  UNIQUE INDEX `code_UNIQUE` (`code` ASC) ,
+  INDEX `brand_idx` (`brand` ASC) ,
+  INDEX `category_idx` (`category` ASC) ,
+  INDEX `created_by_idx` (`created_by` ASC),
   CONSTRAINT `brand`
     FOREIGN KEY (`brand`)
     REFERENCES `billingSystem`.`Brand` (`id`)
@@ -185,10 +185,10 @@ CREATE TABLE IF NOT EXISTS `billingSystem`.`Invoice` (
   `status` VARCHAR(30) NOT NULL,
   `date` DATE NULL,
   PRIMARY KEY (`invoice_number`),
-  UNIQUE INDEX `invoice_number_UNIQUE` (`invoice_number` ASC) VISIBLE,
-  INDEX `payment_method_idx` (`payment_method` ASC) VISIBLE,
-  INDEX `registered_by_idx` (`registered_by` ASC) VISIBLE,
-  INDEX `client_id_idx` (`client_id` ASC) VISIBLE,
+  UNIQUE INDEX `invoice_number_UNIQUE` (`invoice_number` ASC) ,
+  INDEX `payment_method_idx` (`payment_method` ASC) ,
+  INDEX `registered_by_idx` (`registered_by` ASC) ,
+  INDEX `client_id_idx` (`client_id` ASC) ,
   CONSTRAINT `payment_method`
     FOREIGN KEY (`payment_method`)
     REFERENCES `billingSystem`.`Payment_Method` (`id`)
@@ -215,8 +215,8 @@ CREATE TABLE IF NOT EXISTS `billingSystem`.`Invoice_products_detail` (
   `invoice_number` INT NOT NULL,
   `quantity` INT NULL,
   PRIMARY KEY (`product_code`, `invoice_number`),
-  INDEX `fk_Products_has_Invoice_Invoice1_idx` (`invoice_number` ASC) VISIBLE,
-  INDEX `fk_Products_has_Invoice_Products1_idx` (`product_code` ASC) VISIBLE,
+  INDEX `fk_Products_has_Invoice_Invoice1_idx` (`invoice_number` ASC) ,
+  INDEX `fk_Products_has_Invoice_Products1_idx` (`product_code` ASC) ,
   CONSTRAINT `fk_Products_has_Invoice_Products1`
     FOREIGN KEY (`product_code`)
     REFERENCES `billingSystem`.`Products` (`code`)
@@ -238,8 +238,8 @@ CREATE TABLE IF NOT EXISTS `billingSystem`.`Products_stored` (
   `branch_id` INT NOT NULL,
   `quantity` INT NULL,
   PRIMARY KEY (`product_code`, `branch_id`),
-  INDEX `fk_Products_has_Branch_Branch1_idx` (`branch_id` ASC) VISIBLE,
-  INDEX `fk_Products_has_Branch_Products1_idx` (`product_code` ASC) VISIBLE,
+  INDEX `fk_Products_has_Branch_Branch1_idx` (`branch_id` ASC) ,
+  INDEX `fk_Products_has_Branch_Products1_idx` (`product_code` ASC) ,
   CONSTRAINT `fk_Products_has_Branch_Products1`
     FOREIGN KEY (`product_code`)
     REFERENCES `billingSystem`.`Products` (`code`)
